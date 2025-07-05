@@ -90,8 +90,8 @@
 
         body {
             font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(18px, 2.5vw, 22px);
-            line-height: 1.8;
+            font-size: clamp(16px, 2.5vw, 20px);
+            line-height: 1.6;
             color: var(--text-color);
             background: var(--bg-color);
             min-height: 100vh;
@@ -144,11 +144,11 @@
             top: 6px;
         }
 
-        /* Header */
+        /* Header - Compact for Mobile */
         header {
             background: var(--nav-bg);
             backdrop-filter: blur(10px);
-            padding: 1rem 0;
+            padding: 0.5rem 0;
             border-bottom: 2px solid var(--border-color);
             position: sticky;
             top: 0;
@@ -159,106 +159,108 @@
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.5rem;
         }
 
         .site-title {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-size: clamp(1.2rem, 3vw, 2rem);
             color: var(--heading-color);
             margin: 0;
             font-weight: bold;
         }
 
-        /* Navigation */
+        /* Navigation - Compact for Mobile */
         .main-nav {
             display: flex;
-            gap: 1rem;
+            gap: 0.5rem;
             align-items: center;
         }
 
         .nav-buttons {
             display: flex;
-            gap: 0.5rem;
+            gap: 0.25rem;
             list-style: none;
+            flex-wrap: wrap;
         }
 
         .nav-btn {
             background: var(--button-bg);
             color: var(--button-text);
             border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            font-size: 1rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
-            min-height: 44px;
+            min-height: 36px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
+            white-space: nowrap;
         }
 
         .nav-btn:hover {
             background: var(--button-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
         .nav-btn.active {
             background: var(--nav-active);
-            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3);
+            box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.3);
         }
 
         .nav-btn:focus {
-            outline: 3px solid var(--highlight-border);
+            outline: 2px solid var(--highlight-border);
             outline-offset: 2px;
         }
 
-        /* Theme Toggle Button */
+        /* Theme Toggle Button - Compact */
         .theme-toggle {
             background: var(--button-bg);
             color: var(--button-text);
             border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            font-size: 1rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: var(--shadow);
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            min-height: 44px;
+            gap: 0.3rem;
+            min-height: 36px;
         }
 
         .theme-toggle:hover {
             background: var(--button-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
         .theme-toggle:focus {
-            outline: 3px solid var(--highlight-border);
+            outline: 2px solid var(--highlight-border);
             outline-offset: 2px;
         }
 
-        /* Main Content Container */
+        /* Main Content Container - More Space for Mobile */
         main {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
-            min-height: calc(100vh - 200px);
+            padding: 1rem;
+            min-height: calc(100vh - 120px);
             background: var(--bg-overlay);
             backdrop-filter: blur(5px);
-            border-radius: 12px;
-            margin-top: 1rem;
-            margin-bottom: 2rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
             box-shadow: var(--shadow);
         }
 
@@ -299,33 +301,34 @@
         }
 
         h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: 2rem;
-            border-bottom: 4px solid var(--accent-color);
-            padding-bottom: 1rem;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.5rem;
             text-align: center;
         }
 
         h2 {
-            font-size: clamp(1.5rem, 4vw, 2.2rem);
-            margin-top: 3rem;
-            margin-bottom: 1.5rem;
-            border-left: 5px solid var(--accent-color);
-            padding-left: 1rem;
-        }
-
-        h3 {
             font-size: clamp(1.25rem, 3vw, 1.8rem);
             margin-top: 2rem;
             margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 0.75rem;
+        }
+
+        h3 {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--accent-color);
         }
 
         /* Paragraphs and Text */
         p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             text-align: left;
             word-spacing: 1px;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.2px;
             max-width: 70ch;
         }
 
@@ -348,18 +351,31 @@
         }
 
         a:focus {
-            outline: 3px solid var(--highlight-border);
+            outline: 2px solid var(--highlight-border);
             outline-offset: 2px;
+        }
+
+        /* Verse Styling - Fixed for Mobile Word Wrap */
+        .verse {
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 2em;
+            line-height: 1.7;
+            /* Remove pre formatting to allow word wrap */
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
 
         /* Special Content Boxes */
         .highlight {
             background-color: var(--highlight-bg);
-            padding: 2rem;
-            border: 3px solid var(--highlight-border);
-            border-radius: 8px;
-            margin: 2rem 0;
-            font-size: 1.1em;
+            padding: 1.5rem;
+            border: 2px solid var(--highlight-border);
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            font-size: 1.05em;
             font-weight: bold;
             transition: all 0.3s ease;
             backdrop-filter: blur(5px);
@@ -367,10 +383,10 @@
 
         .important-info {
             background-color: var(--info-bg);
-            padding: 2rem;
+            padding: 1.5rem;
             border: 2px solid var(--info-border);
-            border-radius: 8px;
-            margin: 2rem 0;
+            border-radius: 6px;
+            margin: 1.5rem 0;
             transition: all 0.3s ease;
             backdrop-filter: blur(5px);
         }
@@ -378,93 +394,170 @@
         /* Lists */
         ul,
         ol {
-            margin: 1.5rem 0;
-            padding-left: 2rem;
+            margin: 1rem 0;
+            padding-left: 1.5rem;
         }
 
         li {
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             line-height: 1.6;
         }
 
         /* Sections */
         section {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .content-section {
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
-        /* Footer */
+        /* Footer - Compact */
         footer {
             background: var(--nav-bg);
             backdrop-filter: blur(10px);
             border-top: 2px solid var(--border-color);
-            padding: 2rem 0;
+            padding: 1rem 0;
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 2rem;
             transition: all 0.3s ease;
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1rem;
         }
 
-        /* Responsive Design */
+        /* Mobile Specific Styles */
         @media (max-width: 768px) {
+            body {
+                font-size: clamp(14px, 2vw, 18px);
+                line-height: 1.5;
+            }
+
             .header-content {
                 flex-direction: column;
                 text-align: center;
+                padding: 0 0.5rem;
+            }
+
+            .site-title {
+                font-size: clamp(1.1rem, 2.5vw, 1.5rem);
             }
 
             .main-nav {
                 flex-direction: column;
-                gap: 0.5rem;
+                gap: 0.3rem;
             }
 
             .nav-buttons {
                 flex-wrap: wrap;
                 justify-content: center;
+                gap: 0.2rem;
+            }
+
+            .nav-btn {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.75rem;
+                min-height: 32px;
+            }
+
+            .theme-toggle {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.75rem;
+                min-height: 32px;
             }
 
             main {
-                padding: 1rem;
-                margin-top: 0.5rem;
+                padding: 0.75rem;
+                margin-top: 0.25rem;
+                border-radius: 4px;
             }
 
-            .theme-toggle,
-            .nav-btn {
-                padding: 0.5rem 1rem;
-                font-size: 0.9rem;
+            h1 {
+                font-size: clamp(1.2rem, 3vw, 1.8rem);
+                margin-bottom: 1rem;
             }
 
             h2 {
-                border-left: none;
-                border-bottom: 3px solid var(--accent-color);
-                padding-left: 0;
-                padding-bottom: 0.5rem;
+                font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+                margin-top: 1.5rem;
+                border-left: 3px solid var(--accent-color);
+                padding-left: 0.5rem;
             }
-        }
 
-        @media (max-width: 480px) {
-            main {
-                padding: 0.5rem;
+            h3 {
+                font-size: clamp(1rem, 2vw, 1.3rem);
+                margin-top: 1rem;
+            }
+
+            .verse {
+                padding: 0.75rem;
+                margin: 0.75rem 0;
+                font-size: 1em;
+                line-height: 1.6;
             }
 
             .highlight,
             .important-info {
                 padding: 1rem;
+                margin: 1rem 0;
             }
 
             .header-content {
-                padding: 0 1rem;
+                padding: 0 0.5rem;
             }
 
             .nav-buttons {
-                gap: 0.25rem;
+                gap: 0.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 0.25rem 0;
+            }
+
+            .site-title {
+                font-size: clamp(1rem, 2vw, 1.3rem);
+            }
+
+            main {
+                padding: 0.5rem;
+                margin-top: 0.1rem;
+            }
+
+            .verse {
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+                font-size: 0.95em;
+            }
+
+            .highlight,
+            .important-info {
+                padding: 0.75rem;
+                margin: 0.75rem 0;
+            }
+
+            .header-content {
+                padding: 0 0.25rem;
+            }
+
+            .nav-buttons {
+                gap: 0.1rem;
+            }
+
+            .nav-btn {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.7rem;
+                min-height: 28px;
+            }
+
+            .theme-toggle {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.7rem;
+                min-height: 28px;
             }
         }
 
@@ -493,7 +586,7 @@
             background: var(--bg-color);
             margin: 5% auto;
             padding: 0;
-            border-radius: 12px;
+            border-radius: 8px;
             max-width: 800px;
             max-height: 80vh;
             overflow-y: auto;
@@ -502,13 +595,13 @@
         }
 
         .modal-header {
-            padding: 2rem;
+            padding: 1.5rem;
             border-bottom: 2px solid var(--border-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
             background: var(--info-bg);
-            border-radius: 12px 12px 0 0;
+            border-radius: 8px 8px 0 0;
         }
 
         .modal-header h2 {
@@ -525,8 +618,8 @@
             padding: 0.5rem;
             line-height: 1;
             border-radius: 50%;
-            width: 3rem;
-            height: 3rem;
+            width: 2.5rem;
+            height: 2.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -539,18 +632,18 @@
         }
 
         .modal-close:focus {
-            outline: 3px solid var(--highlight-border);
+            outline: 2px solid var(--highlight-border);
             outline-offset: 2px;
         }
 
         .modal-body {
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
         .modal-body h3 {
             color: var(--accent-color);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .modal-body h3:first-child {
@@ -558,11 +651,11 @@
         }
 
         .modal-body ul {
-            margin: 1rem 0;
+            margin: 0.75rem 0;
         }
 
         .modal-body li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
 
         @media (max-width: 768px) {
@@ -595,11 +688,11 @@
                         </button>
                     </li>
                     <li>
-                        <button class="nav-btn" onclick="showPage('about')">ദക്ഷിണാമൂർത്തി സ്തോത്രം</button>
+                        <button class="nav-btn" onclick="showPage('about')">ദക്ഷിണാമൂർത്തി</button>
                     </li>
                     <li>
                         <button class="nav-btn" onclick="showPage('contact')">
-                            ഗുരു പാദുകാ സ്തോത്രം
+                            പാദുകാ സ്തോത്രം
                         </button>
                     </li>
                 </ul>
@@ -615,106 +708,104 @@
                 <h2 id="welcome-heading">ഗുരുസ്തോത്രം</h2>
 
                 <div class="important-info" role="complementary" aria-labelledby="navigation-help">
-                    <div class="verse">
-                        <pre>
-ശ്രിയം ദിശതു മേ ശാശ്വതീ ശാശ്വതീനം
-ശ്രിയൈ ശ്വാസം ശ്രിയൈ പുഷ്ടിം ശ്രിയൈ സ്മിതമീശ്വരീ
-    </pre>
-                    </div>
-                    <div class="verse">
-                        <pre>
-ശ്രിയം ദിശതു മേ ശാശ്വതീ ധാതൃവ്യാപാരയന്ത്രഘട
-ലീലാവിലാസതന്ത്രയन्त्रയയേയ
-    </pre>
-                    </div>
-                    <div class="verse">
-                        <pre>
-ശ്രിയം ദിശതു ത്രീ ശാശ്വതീ ധാതൃവ്യാപാരയാത്രയാ
-യത്രോല്പ ധാതൃ സ്വൈരിണാ ലയോദയവസാനതയാലയേ
-    </pre>
-                    </div>
-                    <div class="verse">
-                        <pre>
-ശ്രീയൈ നമഃ
-    </pre>
-                    </div>
+                    <!-- <div class="verse">ശ്രിയം ദിശതു മേ ശാശ്വതീ ശാശ്വതീനം
+ശ്രിയൈ ശ്വാസം ശ്രിയൈ പുഷ്ടിം ശ്രിയൈ സ്മിതമീശ്വരീ</div>
+                    
+                    <div class="verse">ശ്രിയം ദിശതു മേ ശാശ്വതീ ധാതൃവ്യാപാരയന്ത്രഘട
+ലീലാവിലാസതന്ത്രയന്ത്രയയേയ</div>
+                    
+                    <div class="verse">ശ്രിയം ദിശതു ത്രീ ശാശ്വതീ ധാതൃവ്യാപാരയാത്രയാ
+യത്രോല്പ ധാതൃ സ്വൈരിണാ ലയോദയവസാനതയാലയേ</div>
+                    
+                    <div class="verse">ശ്രീയൈ നമഃ</div> -->
 
-                    <h3>ഗുരുസ്തോത്രം</h3>
+ <h3>ഗുരുസ്തോത്രം</h3>
 
-                    <div class="verse">
-                        <pre>
-ഗുരുർ ബ്രഹ്മാ ഗുരുർ വിഷ്ണു
-ഗുരുർ ദേവോ മഹേശ്വരഃ
+<div class="verse">ഗുരുർ ബ്രഹ്മാ ഗുരുർ വിഷ്ണു
+ഗുരുർ ദേവോ മഹേശ്വരഃ ।
 ഗുരുസ്സാക്ഷാത് പരബ്രഹ്മ
 തസ്മൈ ശ്രീഗുരവേ നമഃ
-    </pre>
-                    </div>
-                    <div class="verse">
-                        <pre>
-അഖണ്ഡമണ്ഡലാകാരം
-വ്യാപ്തം യേന ചരാചരം
+</div>
+                    
+<div class="verse">അഖണ്ഡമണ്ഡലാകാരം
+വ്യാപ്തം യേന ചരാചരം ।
 തത് പദം ദർശിതം യേന
+തസ്മൈ ശ്രീ ഗുരവേ നമഃ
+</div>
+                    
+<div class="verse"> അജ്ഞാനതിമിരാന്ധസ്യ
+ജ്ഞാനാഞ്ജനശലാകയാ ।
+ചക്ഷുരുന്മീലിതം യേന
 തസ്മൈ ശ്രീഗുരവേ നമഃ
-    </pre>
-                    </div>
-                    <div class="verse">
-                        <pre>
-അഗ്ഞാനതിമിരാന്ധസ്യ
-ജ്ഞാനാഞ്ജനശലാകയാ
-ചക്ഷുര് ഉന്മീലിതം യേന
-തസ്മൈ ശ്രീഗുരവേ നമഃ
-    </pre>
-                    </div>
-                    <div class="verse">
-                        <pre>
-അണോർണീയാൻ മഹതോമഹീയാൻ
-ഗുരുസ്വയം ധാമ ന_BINDഃ
-ഗ്യാനസിംഹാസനസ്തത്വം
-നിത്യാനന്ദസ്യ ദീപകഃ
-    </pre>
-                    </div>
-                    <div class="verse">
-                        <pre>
-ഹിമവദ്വ്യപിദേശേഷു
-ഭാരതഖണ്ഡമണ്ഡിതേ
-ഗുരുരാജോ മഹായോഗീ
-തസ്മൈ ശ്രീഗുരവേ നമഃ
-    </pre>
-                    </div>
-                    <div class="verse">
-                        <pre>
-യസ്യ സ്മരണമാത്രേണ
-ജ്ഞാനമുത്പദ്യതേ സ്വയം
-യാ ഗൗരി ശാരദാ ദേവീ
-തസ്മൈ ശ്രീഗുരവേ നമഃ
-    </pre>
-                    </div>
-                    <div class="verse">
-                        <pre>
-ഹൃദ്ഗുഹാന്തർനി‍വിഷ്ടായ
-നിജാനന്ദപ്രദായിനേ
-സാക്ഷാത്കൃതചിദാനന്ദ
-മൂർത്തയേ ശ്രീഗുരവേ നമഃ
-    </pre>
-                    </div>
+</div>
+                    
+<div class="verse">സ്ഥാവരം ജംഗമം വ്യാപ്തം
+യത്ക്ഞ്ചിത്‌ സചരാചരം ।
+തത് പദം ദര്‍ശിതം യേന 
+തസ്മൈ ശ്രീ-ഗുരവേ നമഃ· 
+</div>
+                    
+<div class="verse">ചിന്മയം  വ്യാപി യത് സർവം 
+ത്രൈലോക്യം സചരാചരം
+തത്പദം ദർശിതം യേന
+തസ്മൈ ശ്രീഗുരവേ നമഃ ॥     
+</div>
+                    
+<div class="verse">
+ചൈതന്യ: ശാശ്വത: ശാന്തോ
+വ്യോമാതീതോ നിരഞ്ജന: ।  
+ബിന്ദുനാദകലാതീത: 
+തസ്മൈ ശ്രീഗുരവേ നമഃ ॥
+</div>
+                    
+<div class="verse">
+ജ്ഞാനശക്തിസമാരുഢ: 
+തത്വമാലാവിഭൂ ഷിത: ।
+ഭക്തിമുക്തിപ്രദാതാ ച
+തസ്മൈ ശ്രീഗുരവേ നമഃ ॥
+</div>
 
-                    <h3>ഗുരു പ്രാർത്ഥന</h3>
+<div class="verse">
+അനേകജന്മസംപ്രാപ്ത 
+കർമ്മബന്ധവിദാഹിനേ ।
+ആത്മജ്ഞാനപ്രദാനേന
+തസ്മൈ ശ്രീഗുരവേ നമ: ॥
+</div>
 
-                    <div class="verse">
-                        <pre>
+
+<div class="verse">
+ന ഗുരോരധികം തത്വം 
+ന ഗുരോരധികം തപഃ  
+തത്വജ്ഞാനാത് പരം നാസ്തി 
+തസ്മൈ ശ്രീഗുരവേ നമഃ ॥
+</div>
+
+
+<div class="verse">
+ന ഗുരോരാധികം തത്വം
+ന ഗുരോരാധികം തപ: ।
+തത്ത്വജ്ഞാനത്പരം നാസ്തി 
+തസ്മൈ ശ്രീഗുരവേ നമ: ॥
+</div>
+
+
+<div class="verse">
+മന്നാഥ: ശ്രീജഗന്നാഥോ 
+മദ്ഗുരു: ശ്രീജഗദ്ഗുരു: ।
+മദാത്മാ സർവഭൂതാത്മാ 
+തസ്മൈ ശ്രീഗുരവേ നമ: ॥
+</div>
+
+<div class="verse">ഗുരുരാദിരനാദിശ്ച 
 ഗുരോഃ പരമദൈവതം
-ഗുരോഃ പരതമം നാസ്തി
-തസ്മൈ ശ്രീഗുരവേ നമഃ
-    </pre>
-                    </div>
-                    <div class="verse">
-                        <pre>
-ത്വമേവ മാതാ ച പിതാ ത്വമേവ
-ത്വമേവ ബന്ദുശ്ച സഖാ ത്വമേവ
+ഗുരോഃ പരതരം നാസ്തി
+തസ്മൈ ശ്രീഗുരവേ നമഃ</div>
+                    
+                    <div class="verse">ത്വമേവ മാതാ ച പിതാ ത്വമേവ
+ത്വമേവ ബന്ധുശ്ച സഖാ ത്വമേവ
 ത്വമേവ വിദ്യാ ദ്രവിണം ത്വമേവ
-ത്വമേവ സర్వം മമ ദേവ ദേവ
-    </pre>
-                    </div>
+ത്വമേവ സർവ്വം മമ ദേവ ദേവ !</div>
+                </div>
             </section>
         </div>
 
@@ -726,353 +817,10 @@
                 <div class="important-info" role="complementary">
 
                     <h3>ശാന്തിപാഠം</h3>
-                    <pre>
-ഓം യോ ബ്രഹ്മാണം വിദധാതി പൂര്വം  
+                    <div class="verse">ഓം യോ ബ്രഹ്മാണം വിദധാതി പൂര്വം  
 യോ വൈ വേദാംശ്ച പ്രഹിണോതി തസ്മൈ ।  
 തം ഹ ദേവമാത്മ ബുദ്ധിപ്രകാശം  
-മുമുക്ഷുര്വൈ ശരണമഹം പ്രപദ്യേ ॥
-  </pre>
+മുമുക്ഷുര്വൈ ശരണമഹം പ്രപദ്യേ ॥</div>
 
                     <h3>ധ്യാനം</h3>
-                    <pre>
-ഓം മൌനവ്യാഖ്യാ പ്രകടിതപരബ്രഹ്മതത്ത്വം യുവാനം  
-വര്ഷിഷ്ഠാംതേ വസദൃഷിഗണൈരാവൃതം ബ്രഹ്മനിഷ്ഠൈഃ ।  
-ആചാര്യേംദ്രം കരകലിത ചിന്മുദ്രമാനം ദമൂര്തിം  
-സ്വാത്മാരാമം മുദിതവദനം ദക്ഷിണാമൂര്തിമീഡേ ॥
-  </pre>
-
-                    <h3>സ്തോത്രം – 8 മുഖ്യ വാക്കുകൾ</h3>
-
-                    <div class="verse">
-                        <pre>
-വടവിടപിസമീപേഭൂമിഭാഗേ നിഷണ്ണം  
-സകലമുനിജനാനാം ജ്ഞാനദാതാരമാരാത് ।  
-ത്രിഭുവനഗുരുമീശം ദക്ഷിണാമൂർത്തിദേവം  
-ജനനമരണദുഃഖച്ഛേദദക്ഷം നമാമി ।  
-    </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-ചിത്രം വടതരോര്മൂലേ വൃദ്ധാഃ ശിഷ്യാ ഗുരുര്യുവാ ।  
-ഗുരോസ്തു മൌനവ്യാഖ്യാനം ശിഷ്യാസ്തുച്ഛിന്നസംശയാഃ ।  
-    </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-വിശ്വംദര്പണദൃശ്യമാനനഗരീതുല്യം നിജാന്തർഗതം  
-പശ്യന്നാത്മനി മായയാ ബഹിരിവോദ്ഭൂതം യഥാനിദ്രയാ ।  
-യസ്സാക്ഷാത്കുരുതേ പ്രഭോധസമയേ സ്വാത്മാനമേ വാദ്വയം  
-തസ്മൈ ശ്രീഗുരുമൂർത്തയേ നമ ഇദം ശ്രീദക്ഷിണാമൂർത്തയേ ।  
-    </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-ബീജസ്യാംതരി-വാംകുരോ ജഗദിതം പ്രാങ്നിർവികല്പം പുനഃ  
-മായാകൽപിതദേശകാലകലനா വൈചിത്ര്യചിത്രീകൃതം ।  
-മായാവീവ വിജൃംഭയത്യപി മഹായോഗീവ യഃ സ്വേച്ഛയാ  
-തസ്മൈ ശ്രീഗുരുമൂർത്തയേ നമ ഇദം ശ്രീദക്ഷിണാമൂർത്തയേ ।  
-    </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-യസ്യൈവ സ്ഫുരണം സദാത്മകമസത്കൽപാർത്ഥകം ഭാസതേ  
-സാക്ഷാത്ത്വമസീതി വേദവചസാ യോ ബോധയത്യാശ്രിതാൻ ।  
-യസ്സാക്ഷാത്കാണാദ്ഭവേന്ന പുരനാവൃത്തിര്ഭവാംഭോനിധൗ  
-തസ്മൈ ശ്രീഗുരുമൂർത്തയേ നമ ഇദം ശ്രീദക്ഷിണാമൂർത്തയേ ।  
-    </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-ദേഹം പ്രാണമപീംദ്രിയാണ്യപിചലാം ബുദ്ധിച ശൂന്യം വിദുഃ  
-സ്ത്രീബാലാന്ധജഡോപമാസ്ത്വഹമിതി ഭ്രാന്താഭൃശം വാദിനഃ ।  
-മായാശക്തിവിലാസകല്പിത മഹാവ്യാമോഹസംഹാരിണേ  
-തസ്മൈ ശ്രീഗുരുമൂർത്തയേ നമ ഇദം ശ്രീദക്ഷിണാമൂർത്തയേ ।  
-    </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-രാഹുഗ്രസ്ത ദിവാകരേന്ദു സദൃശോ മായാസമാച്ഛാദനാത്  
-സന്മാത്രഃ കരണോപസംഹരണതോ യോഭൂൽസുഷുപ്തഃ പുമാൻ ।  
-പ്രാഗത്സ്വാപ്സ് സമിതി പ്രഭോധസമയേ യഃ പ്രത്യഭിജ്ഞായതേ  
-തസ്മൈ ശ്രീഗുരുമൂർത്തയേ നമ ഇദം ശ്രീദക്ഷിണാമൂർത്തയേ ।  
-    </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-ബാല്യാദിഷ്വപി ജാഗ്രദാദിഷു തഥാ സര്‍വാസ്വവസ്ഥാസ്വപി  
-വ്യാവൃത്താസ്വനുവര്തമാനമഹമിത്യന്തഃ സ്ഫുരന്തം സദാ ।  
-സ്വാത്മാനം പ്രകടീകരോതി ഭജതാം യോ മുദ്രയാ ഭദ്രയാ  
-തസ്മൈ ശ്രീഗുരുമൂർത്തയേ നമ ഇദം ശ്രീദക്ഷിണാമൂർത്തയേ ।  
-    </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-വിശ്വം പശ്യതി കാര്യകാരണതയാ സ്വസ്വാമിസംബന്ധതഃ  
-ശിഷ്യചാര്യതയാ തഥൈവ പിതൃ പുത്രാദ്യാത്മനാ ഭേദതഃ ।  
-സ്വപ്നേ ജാഗ്രതീ വായഏഷ പുരുഷോ മായാ പരിഭ്രാമിതഃ  
-തസ്മൈ ശ്രീഗുരുമൂർത്തയേ നമ ഇദം ശ്രീദക്ഷിണാമൂർത്തയേ ।  
-    </pre>
-                    </div>
-
-                    <h3>ശാന്തി</h3>
-                    <pre>ഓം ശാന്തി: ശാന്തി: ശാന്തി: ॥
-  </pre>
-                </div>
-            </section>
-        </div>
-
-        <!-- Contact Page -->
-        <div class="page-content" id="contact-page">
-            <section class="content-section" aria-labelledby="contact-heading">
-                <h2 id="contact-heading">ഗുരു പാദുകാ സ്തോത്രം</h2>
-
-                <div class="important-info" role="complementary">
-                    <div class="verse">
-                        <pre>
-അനംതസംസാരസമുദ്രതാര-
-നൌകായിതാഭ്യാം ഗുരുഭക്തിദാഭ്യാമ് ।
-വൈരാഗ്യസാമ്രാജ്യദപൂജനാഭ്യാം
-നമോ നമഃ ശ്രീഗുരുപാദുകാഭ്യാമ് ॥ 1 ॥
-  </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-കവിത്വവാരാശിനിശാകരാഭ്യാം
-ദൌര്ഭാഗ്യദാവാംബുദമാലികാഭ്യാമ് ।
-ദൂരീകൃതാനമ്രവിപത്തി താഭ്യാം
-നമോ നമഃ ശ്രീഗുരുപാദുകാഭ്യാമ് ॥ 2 ॥
-  </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-നതാ യയോഃ ശ്രീപതിതാം സമീയുഃ
-കദാചിദപ്യാശു ദരിദ്രവര്യാഃ ।
-മൂകാശ്ച വാചസ്പതിതാം ഹി താഭ്യാം
-നമോ നമഃ ശ്രീഗുരുപാദുകാഭ്യാമ് ॥ 3 ॥
-  </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-നാലീകനീകാ ശപദാഹൃതാഭ്യാം
-നാനാവിമോഹാദിനിവാരികാഭ്യാം ।
-നമജ്ജനാഭീഷ്ടതതിപ്രദാഭ്യാം
-നമോ നമഃ ശ്രീഗുരുപാദുകാഭ്യാമ് ॥ 4 ॥
-  </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-നൃത്പാലിമൗലിവ്രജരത്നകാംതി-
-സരിദ്വിരാജജ്ഘഷകന്യകാഭ്യാമ് ।
-നൃപത്വദാഭ്യാം നതലോകപംക്തേ
-നമോ നമഃ ശ്രീഗുരുപാദുകാഭ്യാമ് ॥ 5 ॥
-  </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-പാപാംധകാരാർകപരംപരാഭ്യാം
-താപത്രയാഹീന്ദ്രഖഗേശ്വരാഭ്യാമ് ।
-ജാഡ്യാബ്ധിസംശോഷണവാഡവാഭ്യാം
-നമോ നമഃ ശ്രീഗുരുപാദുകാഭ്യാമ് ॥ 6 ॥
-  </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-ശമാദിഷട്കപ്രദവൈഭവാഭ്യാം
-സമാധിദാനവ്രതദീക്ഷിതാഭ്യാം ।
-രമാധവാംഘ്രിസ്ഥാനഭക്തിദാഭ്യാം
-നമോ നമഃ ശ്രീഗുരുപാദുകാഭ്യാമ് ॥ 7 ॥
-  </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-സ്വാര്ചാപരാണാമഖിലേഷ്ടദാഭ്യാം
-സ്വാഹാസഹായാക്ഷധുരംധരാഭ്യാം ।
-സ്വാംതാഛ്ഛഭാവപ്രദപൂജനാഭ്യാം
-നമോ നമഃ ശ്രീഗുരുപാദുകാഭ്യാമ് ॥ 8 ॥
-  </pre>
-                    </div>
-
-                    <div class="verse">
-                        <pre>
-കാമാദിസര്പവ്രജഗാരുഡാഭ്യാം
-വിവേകവൈരാഗ്യനിധിപ്രദാഭ്യാം ।
-ബോധപ്രദാഭ്യാം ദ്രുതമോക്ഷദാഭ്യാം
-നമോ നമഃ ശ്രീഗുരുപാദുകാഭ്യാമ് ॥ 9 ॥
-  </pre>
-                    </div>
-
-                </div>
-            </section>
-
-
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer role="contentinfo">
-        <div class="footer-content">
-            <p>&copy; 2025 ഗുരുവന്ദനം</p>
-        </div>
-    </footer>
-    <script>
-        /*
-         * Open Source Website Template
-         * MIT License - Copyright (c) 2025 Open Source Community
-         *
-         * This JavaScript code is released under the MIT License.
-         * See the full license text in the HTML comments above.
-         */
-
-        // Theme and Page Management
-        const SiteManager = {
-            currentPage: "home",
-
-            init() {
-                this.setInitialTheme();
-                this.setupSystemThemeListener();
-                this.setupEventListeners();
-            },
-            updateToggleButton(theme) {
-                const toggleButton = document.querySelector(".theme-toggle");
-                if (!toggleButton) return;
-
-                const icon = toggleButton.querySelector(".theme-icon");
-                const text = toggleButton.querySelector(".theme-text");
-            },
-
-            announceThemeChange(theme) {
-                const announcement = document.createElement("div");
-                announcement.setAttribute("aria-live", "polite");
-                announcement.setAttribute("aria-atomic", "true");
-                announcement.textContent = `Switched to ${theme} mode`;
-                announcement.style.cssText =
-                    "position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;";
-
-                document.body.appendChild(announcement);
-                setTimeout(() => {
-                    if (document.body.contains(announcement)) {
-                        document.body.removeChild(announcement);
-                    }
-                }, 1000);
-            },
-
-            showPage(pageId) {
-                // Hide all pages
-                document.querySelectorAll(".page-content").forEach((page) => {
-                    page.classList.remove("active");
-                });
-
-                // Show selected page
-                const targetPage = document.getElementById(pageId + "-page");
-                if (targetPage) {
-                    targetPage.classList.add("active");
-                }
-
-                // Update navigation buttons
-                document.querySelectorAll(".nav-btn").forEach((btn) => {
-                    btn.classList.remove("active");
-                });
-
-                if (event && event.target) {
-                    event.target.classList.add("active");
-                }
-
-                this.currentPage = pageId;
-                this.announcePageChange(pageId);
-            },
-
-            announcePageChange(pageId) {
-                const pageNames = {
-                    home: "Home",
-                    about: "About",
-                    contact: "Contact",
-                };
-
-                const announcement = document.createElement("div");
-                announcement.setAttribute("aria-live", "polite");
-                announcement.setAttribute("aria-atomic", "true");
-                announcement.textContent = `Switched to ${pageNames[pageId]} page`;
-                announcement.style.cssText =
-                    "position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;";
-
-                document.body.appendChild(announcement);
-                setTimeout(() => {
-                    if (document.body.contains(announcement)) {
-                        document.body.removeChild(announcement);
-                    }
-                }, 1000);
-            },
-
-            showModal(modalId) {
-                const modal = document.getElementById(modalId);
-                if (modal) {
-                    modal.style.display = "block";
-                    modal.setAttribute("aria-hidden", "false");
-
-                    // Focus the close button
-                    const closeBtn = modal.querySelector(".modal-close");
-                    if (closeBtn) {
-                        closeBtn.focus();
-                    }
-
-                    // Prevent body scrolling
-                    document.body.style.overflow = "hidden";
-                }
-            },
-
-            closeModal(modalId) {
-                const modal = document.getElementById(modalId);
-                if (modal) {
-                    modal.style.display = "none";
-                    modal.setAttribute("aria-hidden", "true");
-
-                    // Restore body scrolling
-                    document.body.style.overflow = "";
-                }
-            },
-
-            closeAllModals() {
-                const modals = document.querySelectorAll(".modal");
-                modals.forEach((modal) => {
-                    modal.style.display = "none";
-                    modal.setAttribute("aria-hidden", "true");
-                });
-
-                // Restore body scrolling
-                document.body.style.overflow = "";
-            },
-        };
-
-        // Global functions for onclick handlers
-        function toggleTheme() {
-            SiteManager.toggleTheme();
-        }
-
-        function showPage(pageId) {
-            SiteManager.showPage(pageId);
-        }
-        // Initialize when DOM is ready
-        if (document.readyState === "loading") {
-            document.addEventListener("DOMContentLoaded", () => SiteManager.init());
-        } else {
-            SiteManager.init();
-        }
-    </script>
-</body>
-
-</html>
+                    <div class="verse">ഓം മൌനവ്യാഖ്യാ പ
